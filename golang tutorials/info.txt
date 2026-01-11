@@ -1,0 +1,130 @@
+Go is a cross-platform, open source programming language
+Go can be used to create high-performance applications
+Go is a fast, statically typed, compiled language known for its simplicity and efficiency
+Go was developed at Google by Robert Griesemer, Rob Pike, and Ken Thompson in 2007
+Go's syntax is similar to C++
+Supports concurrency through goroutines and channel
+Has automatic garbage collection
+Does not support classes and objects
+Does not support inheritance
+
+To start using Go, you need two things:
+
+A text editor, like VS Code, to write Go code
+A compiler, like GCC, to translate the Go code into a language that the computer will understand
+
+
+go version
+go run .\helloworld.go
+go build .\helloworld.go
+
+Go, statements are separated by ending a line (hitting the Enter key) or by a semicolon ";".
+Hitting the Enter key adds ";" to the end of the line implicitly (does not show up in the source code).
+
+In Go, there are different types of variables, for example:
+
+int- stores integers (whole numbers), such as 123 or -123
+float32- stores floating point numbers, with decimals, such as 19.99 or -19.99
+string - stores text, such as "Hello World". String values are surrounded by double quotes
+bool- stores values with two states: true or false
+
+var variablename type = value
+Note: You always have to specify either type or value (or both)
+
+variablename := value
+Note: It is not possible to declare a variable using :=, without assigning a value to it.
+
+
+In Go, all variables are initialized. 
+So, if you declare a variable without an initial value, 
+its value will be set to the default value of its type:
+
+
+ var a string
+  var b int
+  var c bool
+
+  fmt.Println(a)   ""
+  fmt.Println(b)   0
+  fmt.Println(c)   flase
+
+var student1 string
+  student1 = "John"
+
+Difference Between var and :=
+
+var	                                               
+Can be used inside and outside of functions	        
+Variable declaration and value assignment
+can be done separately	
+ 
+:=
+
+Can only be used inside functions
+Variable declaration and value assignment cannot be done separately 
+(must be done in the same line)
+
+package main
+import ("fmt")
+
+var a int
+var b int = 2
+var c = 3
+
+func main() {
+  a = 1
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Println(c)
+}
+
+
+var a, b, c, d int = 1, 3, 5, 7
+ var a, b = 6, "Hello"
+  c, d := 7, "World!"
+
+Go Variable Declaration in a Block
+var (
+     a int
+     b int = 1
+     c string = "hello"
+   )
+
+
+//coststants
+
+const CONSTNAME type = value
+
+Constant names are usually written in uppercase letters (for easy identification and differentiation from variables)
+Constants can be declared both inside and outside of a function
+
+There are two types of constants:
+        Typed constants
+        Untyped constants
+
+Typed constants are declared with a defined type: 
+        package main
+        import ("fmt")
+
+        const A int = 1
+
+        func main() {
+        fmt.Println(A)
+        }
+
+Untyped constants are declared without a type:
+        package main
+        import ("fmt")
+
+        const A = 1
+
+        func main() {
+        fmt.Println(A)
+        }
+
+Multiple Constants Declaration
+        const (
+            A int = 1
+            B = 3.14
+            C = "Hi!"
+        )
