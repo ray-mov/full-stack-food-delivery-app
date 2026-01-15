@@ -1,3 +1,8 @@
 Gin is a high-performance HTTP web framework written in Go
 Installation
 import "github.com/gin-gonic/gin"
+
+mkdir gin-quickstart && cd gin-quickstart
+go mod init gin-quickstart
+
+go get -u github.com/gin-gonic/gin
